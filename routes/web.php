@@ -3,10 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\ContactoController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', function () {
-    return view('home');
-});
+
+route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('contacto', [ContactoController::class, 'index'])->name('contacto.index');
 
 Route::get('/login',[SessionsController::class,'create'])
     ->middleware('guest')
