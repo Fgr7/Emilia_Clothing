@@ -29,3 +29,7 @@ Route::get('/register',[RegisterController::class,'create'])
 
 Route::get('/descripcion', [InfoController::class, 'create'])
     ->name('info.create');
+
+Route::get('/info',[InfoController::class,'create'])
+    ->middleware('guest')
+    ->name('info.index');   
