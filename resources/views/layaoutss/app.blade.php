@@ -13,25 +13,32 @@
   <body class="bg-gray-100 text-gray-800">
     <!-- Document body -->
     <nav class="flex py-5 bg-pink-300 text-white"> 
-        <div class="w-1/2 px-12 mr-auto">
-            <p class="text-4xl front-bold text-pink-500 font-serif">Emilia</p>
+        <div class="w-1/4 px-12 mr-auto">
+            <p class="text-4xl italic front-bold text-pink-500 font-serif">Emilia</p>
         </div>
-        <ul class="w-1/2 px-16 ml-auto flex justify-end pt-l">
+        <ul class="w-3/4 px-16 ml-auto flex justify-end pt-l">
+        <li class="mx-1">
+                <a class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
+                <a class="text-xl py-2 px-4  hover:text-pink-700">Descripción</a>
+                <a class="text-xl py-2 px-4  hover:text-pink-700">Catálogo</a>
+                <a class="text-xl py-2 px-4  hover:text-pink-700">Contacto</a>
+
+        </li>
           @if(auth()->check())
             <li class="mx-6">
                 <p class="text-xl text-pink-400 font ">Bienvenido   <b>{{ auth()->user()->name }}</b></p>
             </li>
 
             <li>
-                <a href="{{ route('login.destroy')}}" class= "front-bold border-2 border-white py-3 px-4 rounded-md hover:bg-white hover:text-pink-700">Log out</a>
+                <a href="{{ route('login.destroy')}}" class= "front-bold text-xl border-2 border-white py-3 px-4 rounded-md hover:bg-white hover:text-pink-700">Log out</a>
             </li>
           @else
           <li class="mx-1">
-                <a href="{{ route('login.index')  }}" class="font-semibold hover:bg-pink-700 py-3 px-4 rounded-md">Log In</a>
+                <a href="{{ route('login.index')  }}" class="font-semibold text-xl hover:bg-pink-700 py-3 px-4 rounded-md">Log In</a>
             </li>
 
             <li>
-                <a href="{{ route('register.index')  }}" class= "front-semibold border-2 border-white py-2 px-4 rounded-md hover:bg-white hover:text-pink-700">Register</a>
+                <a href="{{ route('register.index')  }}" class= "front-semibold text-xl border-2 border-white py-2 px-4 rounded-md hover:bg-white hover:text-pink-700">Register</a>
             </li>
           @endif
         </ul>  
