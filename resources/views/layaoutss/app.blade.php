@@ -18,8 +18,13 @@
         </div>
         <ul class="w-3/4 px-16 ml-auto flex justify-end pt-l">
         <li class="mx-1">
+<<<<<<< HEAD
                 <a href="{{ route('home.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
                 <a class="text-xl py-2 px-4  hover:text-pink-700">Descripción</a>
+=======
+                <a class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
+                <a href="{{route('info.index')}}" class="text-xl py-2 px-4  hover:text-pink-700">Descripción</a>
+>>>>>>> a88fc442c2a6666f6baf54b51bd428128d200dda
                 <a class="text-xl py-2 px-4  hover:text-pink-700">Catálogo</a>
                 <a href="{{ route('contacto.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Contacto</a>
 
