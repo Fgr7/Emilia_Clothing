@@ -45,7 +45,13 @@
     @enderror
     <br>
     <button class="bg-black rounded-md py-3 px-7 mt-6 text-white text-right">Enviar Mensaje</button>
+</form>
 
+@if (session('info'))
+    <script>
+        alert("{{ session('info') }}")
+    </script>
+@endif
 
 </div>
 </div>
