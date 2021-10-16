@@ -29,7 +29,7 @@
     </label>
     <br>
 
-    @error('email')
+    @error('correo')
         <p><strong>{{ $message }}</strong></p>
 
     @enderror
@@ -39,7 +39,7 @@
         <textarea placeholder="Mensaje" name="mensaje" rows="4" ></textarea>
     </label>
 
-    @error('message')
+    @error('mensaje')
         <p><strong>{{ $message }}</strong></p>
 
     @enderror
