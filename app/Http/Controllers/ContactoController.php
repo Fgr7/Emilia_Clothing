@@ -18,8 +18,8 @@ class ContactoController extends Controller
 
         $request->validate([
             'name'=>'required',
-            'email'=>'required|email',
-            'message'=>'required',
+            'correo'=>'required|email',
+            'mensaje'=>'required',
         ]);
         $correo = new ContactanosMailable($request->all());
         Mail::to('judiespa07@gmail.com')->send($correo);
