@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>@yield('title') - Laravel App</title>
-    
+
     <!-- Tailwind CSS Link -->
-    <link rel="stylesheet" 
+    <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
   </head>
   <body class="bg-gray-100 text-gray-800">
     <!-- Document body -->
-    <nav class="flex py-5 bg-pink-300 text-white"> 
+    <nav class="flex py-5 bg-pink-300 text-white">
         <div class="w-1/4 px-12 mr-auto">
             <p class="text-4xl italic front-bold text-pink-500 font-serif">Emilia</p>
         </div>
         <ul class="w-3/4 px-16 ml-auto flex justify-end pt-l">
         <li class="mx-1">
-                <a class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
+
+                <a href="{{ route('home.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
                 <a href="{{route('info.index')}}" class="text-xl py-2 px-4  hover:text-pink-700">Descripción</a>
-                <a class="text-xl py-2 px-4  hover:text-pink-700">Catálogo</a>
-                <a class="text-xl py-2 px-4  hover:text-pink-700">Contacto</a>
+                <a href="{{ route('catalogo.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Catálogo</a>
+                <a href="{{ route('contacto.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Contacto</a>
 
         </li>
           @if(auth()->check())
@@ -41,11 +42,11 @@
                 <a href="{{ route('register.index')  }}" class= "front-semibold text-xl border-2 border-white py-2 px-4 rounded-md hover:bg-white hover:text-pink-700">Register</a>
             </li>
           @endif
-        </ul>  
+        </ul>
 
     </nav>
-   
-      
+
+
     @yield('content')
 
   </body>
