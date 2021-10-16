@@ -23,6 +23,6 @@ class ContactoController extends Controller
         ]);
         $correo = new ContactanosMailable($request->all());
         Mail::to('judiespa07@gmail.com')->send($correo);
-        return view('contacto');
+        return redirect()->route('contacto.index')->with('info', 'mensaje enviado');
     }
 }
