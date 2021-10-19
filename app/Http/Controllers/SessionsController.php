@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
 
 class SessionsController extends Controller
 {
@@ -12,7 +13,7 @@ class SessionsController extends Controller
     }
 
     public function store(){
-        
+
         if(auth()->attempt(request(['email','password'])) == false) {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try againt',
@@ -29,3 +30,5 @@ class SessionsController extends Controller
 
 
 }
+
+

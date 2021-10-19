@@ -1,6 +1,6 @@
 @extends('layaoutss.app')
 
-@section('title', 'Home')
+@section('title', 'Descripcion')
 
 @section('content')
 
