@@ -9,6 +9,8 @@
     <!-- Tailwind CSS Link -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.1/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a23e6feb03.js"></script>
   </head>
   <body class="bg-gray-100 text-gray-800">
     <!-- Document body -->
@@ -18,12 +20,9 @@
         </div>
         <ul class="w-3/4 px-16 ml-auto flex justify-end pt-l">
         <li class="mx-1">
-<<<<<<< HEAD
-                <a href="http://localhost/tienda/public/"  class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
-=======
 
+                
                 <a href="{{ route('home.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Inicio</a>
->>>>>>> 1e5d8a1c7e61cdda90eb9c5c2bc31779e34cd4bc
                 <a href="{{route('info.index')}}" class="text-xl py-2 px-4  hover:text-pink-700">Descripción</a>
                 <a href="{{ route('catalogo.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Catálogo</a>
                 <a href="{{ route('contacto.index') }}" class="text-xl py-2 px-4  hover:text-pink-700">Contacto</a>

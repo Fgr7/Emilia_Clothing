@@ -7,7 +7,8 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\CatalogoController;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductsController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('contacto', [ContactoController::class, 'index'])->name('contacto.index');
@@ -33,3 +34,19 @@ Route::post('/register',[RegisterController::class,'store'])
 Route::get('/register',[RegisterController::class,'create'])
     ->middleware('guest')
     ->name('register.index');
+
+Route::get('/admin',[AdminController::class,'index'])
+    ->middleware('auth.admin')
+    ->name('admin.index');
+
+Route::get('/products',[ProductsController::Class,'index'])
+    ->middleware('auth.admin')
+    ->name('products.index');
+
+Route::get('/products/create',[ProductsController::Class,'create'])
+    ->name('products.create');
+
+Route::post('/products/create',[ProductsController::Class,'store'])
+    ->name('products.store');
+
+Route::resource('products', ProductsController::class);
