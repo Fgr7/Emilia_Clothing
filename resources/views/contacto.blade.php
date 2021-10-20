@@ -4,9 +4,14 @@
 
 @section('content')
 
-<div class="flex bg-gray-100 p-20">
+<div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 h-screen pt-4">
+      <div class="max-h-96  md:h-screen">
+        <img class="w-screen h-screen object-cover object-top" src="https://sc04.alicdn.com/kf/HTB1cX45olUSMeJjy1zjq6A0dXXaO.jpg" alt="">
+      </div>
+<div class="flex bg-gray-100 p-10">
     <div class="mb-auto mt-auto max-w-lg">
-    <h1 class="text-5xl font-serif text-pink-300 text-right  "> Escribenos aqui</h1>
+    <h1 class="text-5xl font-serif text-pink-400 text-right  "> Escribenos aqui</h1>
     <div class="grid gap-3 grid-cols-1 text-left">
 
 <form action="{{ route('contactanos.store') }}" method="POST" >
