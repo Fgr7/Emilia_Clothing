@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class AdminAuth
+class ProductsAuth
 {
     /**
      * Handle an incoming request.
@@ -21,6 +21,6 @@ class AdminAuth
                 return $next($request);
             }
         }
-            return redirect()->to('/login');
+            return redirect()->to('/');
     }
 }
