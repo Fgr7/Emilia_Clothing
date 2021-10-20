@@ -50,3 +50,4 @@ Route::post('/products/create',[ProductsController::Class,'store'])
     ->name('products.store');
 
 Route::resource('products', ProductsController::class);
+

@@ -14,7 +14,7 @@
   </head>
   <body class="bg-gray-100 text-gray-800">
     <!-- Document body -->
-    <nav class="flex py-5 bg-pink-300 text-white">
+    <nav class="flex py-5 bg-pink-300 text-white mb-10">
         <div class="w-1/4 px-12 mr-auto">
             <p class="text-4xl italic front-bold text-pink-500 font-serif">Emilia</p>
         </div>
