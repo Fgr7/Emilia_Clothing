@@ -39,15 +39,24 @@ Route::get('/admin',[AdminController::class,'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
 
-Route::get('/products',[ProductsController::Class,'index'])
+Route::get('/products',[ProductsController::class,'index'])
     ->middleware('auth.admin')
     ->name('products.index');
 
-Route::get('/products/create',[ProductsController::Class,'create'])
+Route::get('/products/create',[ProductsController::class,'create'])
+    ->middleware('auth.admin')
     ->name('products.create');
 
-Route::post('/products/create',[ProductsController::Class,'store'])
+Route::post('/products/create',[ProductsController::class,'store'])
+    ->middleware('auth.admin')
     ->name('products.store');
 
-Route::resource('products', ProductsController::class);
+Route::delete('/products',[ProductsController::class,'destroy'])
+    ->middleware('auth.admin')
+    ->name('products.destroy');
 
+Route::get('/products/edit',[ProductsController::class,'edit'])
+    ->middleware('auth.admin')
+    ->name('products.edit');
+
+    Route::resource('products', ProductsController::class);

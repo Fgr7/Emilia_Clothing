@@ -1,6 +1,6 @@
 @extends('layaoutss.app')
 
-@section('title', 'Home')
+@section('title', 'Products')
 
 @section('content')
 
@@ -46,7 +46,7 @@
         </table>
 
         <nav class="h-16 flex justify-end py-4 px-16">
-            <a href="{{route('products.index')}}"  class="borde borde-pink-500 rounded px-4 pt-1 h-10 bg-white text-pink-300 font-semibold mx-2"> 
+            <a href="{{route('products.index')}}"  class="borde borde-pink-500 rounded px-4 pt-1 h-10 bg-white text-pink-300 font-semibold mx-2">
             Products</a>
             <a href="{{route('products.create')}}" class="text-white rounded px-4 pt-1 h-10 bg-pink-500 font-semibold mx-2 hover:pink-700">Create  </a>
 

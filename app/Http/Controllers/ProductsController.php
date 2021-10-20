@@ -7,9 +7,9 @@ use App\Models\Product;
 
 class ProductsController extends Controller
 {
-    
+
     public function index (){
-        
+
         $products = Product::all();
 
         return view('products.index', compact('products'));
@@ -25,6 +25,7 @@ class ProductsController extends Controller
     public function store(Request $request){
 
         $product = new Product();
+
 
         $product->title = $request->title;
         $product->color = $request->color;
